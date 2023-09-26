@@ -1,0 +1,66 @@
+@import "../../variables";
+
+.darkGray {
+  background-color: $darkColor;
+  .container {
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+    .contentCtn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 43px;
+    }
+  }
+  .redBorder {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .infoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+    margin-top: 60px;
+    .amount {
+      font-size: 40px;
+      font-weight: 800;
+    }
+    .type {
+      font-family: "Alegreya", serif;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+}
+
+//Tablet version
+@media (max-width: 1040px) {
+  .container {
+    max-width: 694px !important;
+  }
+}
+
+//Smartphone version
+@media (max-width: 720px) {
+  .container {
+      padding: 0 32px;
+      max-width: 694px;
+      .redBorder {
+        left: 32px;
+      }
+      .contentCtn {
+        flex-direction: column;
+        gap: 80px;
+        .amount {
+          font-size: 32px;
+        }
+        .type {
+          font-size: 24px;
+        }
+      }
+  }
+}

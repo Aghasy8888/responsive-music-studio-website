@@ -1,0 +1,56 @@
+@import "./variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "inter", sans-serif;
+  a {
+    text-decoration: none;
+  }
+  section {
+    padding: 80px 0;
+    color: #fff;
+    h2 {
+      position: relative;
+      font-size: 40px;
+      font-weight: 800;
+      //   line-height: normal;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 4px;
+        background-color: $redColor;
+        left: 0;
+        bottom: -2px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+}
+
+@media (max-width: 720px) {
+  body {
+    section {
+      h2 {
+        margin: 32px;
+        font-size: 24px;
+        &::after {
+          width: 50px;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../variables";
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  min-height: 100vh;
+  background: url("../../assets/heroImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .cta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 450px;
+    border-radius: 20px 20px 0px 0px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-left: 4px solid #fff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+    padding: 50px 40px;
+
+    .courseName {
+      font-size: 16px;
+      font-weight: 800;
+      color: white;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 4px;
+        background-color: $redColor;
+        left: 39px;
+        top: 89px;
+      }
+    }
+
+    h1 {
+      color: #fff;
+      font-family: Alegreya;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    .demoBtn {
+      border-radius: 10px;
+      background-color: $redColor;
+      color: #fff;
+      padding: 10px 32px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+  }
+}
+
+//Tablet version
+@media (max-width: 1040px) {
+  header {
+    .container {
+      max-width: 694px !important;
+      .cta {
+        width: 356px;
+      }
+    }
+  }
+}
+
+//Smartphone version
+@media (max-width: 720px) {
+  header {
+    .container {
+      padding: 0 32px;
+      max-width: 694px;
+      .cta {
+        width: unset;
+        right: 32px;
+        left: 32px;
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
